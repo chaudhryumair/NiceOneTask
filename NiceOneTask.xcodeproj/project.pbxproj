@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		159B14A1185981342257D31A /* Pods_NiceOneTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3352AC67E9F25661847621 /* Pods_NiceOneTask.framework */; };
+		4C20B10CA555158ACFC3FC9C /* Pods_NiceOneTask_NiceOneTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C4D9D4F64C3CA45351ED41 /* Pods_NiceOneTask_NiceOneTaskUITests.framework */; };
+		C7079F112CE5EC0373C521F1 /* Pods_NiceOneTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4F5125C1CF9FB741923DB7 /* Pods_NiceOneTaskTests.framework */; };
 		D213D43E2B40566400F54720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D43D2B40566400F54720 /* AppDelegate.swift */; };
 		D213D4402B40566400F54720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D43F2B40566400F54720 /* SceneDelegate.swift */; };
 		D213D4422B40566400F54720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4412B40566400F54720 /* ViewController.swift */; };
-		D213D4452B40566400F54720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D213D4432B40566400F54720 /* Main.storyboard */; };
 		D213D4472B40566700F54720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D213D4462B40566700F54720 /* Assets.xcassets */; };
 		D213D44A2B40566700F54720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D213D4482B40566700F54720 /* LaunchScreen.storyboard */; };
 		D213D4552B40566800F54720 /* NiceOneTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4542B40566800F54720 /* NiceOneTaskTests.swift */; };
 		D213D45F2B40566800F54720 /* NiceOneTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D45E2B40566800F54720 /* NiceOneTaskUITests.swift */; };
 		D213D4612B40566800F54720 /* NiceOneTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4602B40566800F54720 /* NiceOneTaskUITestsLaunchTests.swift */; };
+		D2935FA32B4413A9008A6DC9 /* ShoppingBasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FA22B4413A9008A6DC9 /* ShoppingBasketModel.swift */; };
+		D2935FA92B441753008A6DC9 /* ShoppingBasketData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10C4D9D4F64C3CA45351ED41 /* Pods_NiceOneTask_NiceOneTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceOneTask_NiceOneTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		264F103914366B31C1AC95C0 /* Pods-NiceOneTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTaskTests.release.xcconfig"; path = "Target Support Files/Pods-NiceOneTaskTests/Pods-NiceOneTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A4F5125C1CF9FB741923DB7 /* Pods_NiceOneTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceOneTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6061CE3ADA7B751D166CD696 /* Pods-NiceOneTask-NiceOneTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTask-NiceOneTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-NiceOneTask-NiceOneTaskUITests/Pods-NiceOneTask-NiceOneTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73E7B54EF9E5546DE90A5B3A /* Pods-NiceOneTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTask.release.xcconfig"; path = "Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask.release.xcconfig"; sourceTree = "<group>"; };
+		9781838372D698E3179706A4 /* Pods-NiceOneTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-NiceOneTaskTests/Pods-NiceOneTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADB83C4D85BE6A51F097DED2 /* Pods-NiceOneTask-NiceOneTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTask-NiceOneTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-NiceOneTask-NiceOneTaskUITests/Pods-NiceOneTask-NiceOneTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D213D43A2B40566400F54720 /* NiceOneTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceOneTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D213D43D2B40566400F54720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D213D43F2B40566400F54720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D213D4412B40566400F54720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D213D4442B40566400F54720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D213D4462B40566700F54720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D213D4492B40566700F54720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D213D44B2B40566700F54720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 		D213D45A2B40566800F54720 /* NiceOneTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NiceOneTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D213D45E2B40566800F54720 /* NiceOneTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOneTaskUITests.swift; sourceTree = "<group>"; };
 		D213D4602B40566800F54720 /* NiceOneTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOneTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2935FA22B4413A9008A6DC9 /* ShoppingBasketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketModel.swift; sourceTree = "<group>"; };
+		D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoppingBasketData.json; sourceTree = "<group>"; };
+		DF7658AB700E33587B1848CF /* Pods-NiceOneTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTask.debug.xcconfig"; path = "Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask.debug.xcconfig"; sourceTree = "<group>"; };
+		FB3352AC67E9F25661847621 /* Pods_NiceOneTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceOneTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159B14A1185981342257D31A /* Pods_NiceOneTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7079F112CE5EC0373C521F1 /* Pods_NiceOneTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C20B10CA555158ACFC3FC9C /* Pods_NiceOneTask_NiceOneTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0216085F0B4DE68B6C509915 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF7658AB700E33587B1848CF /* Pods-NiceOneTask.debug.xcconfig */,
+				73E7B54EF9E5546DE90A5B3A /* Pods-NiceOneTask.release.xcconfig */,
+				6061CE3ADA7B751D166CD696 /* Pods-NiceOneTask-NiceOneTaskUITests.debug.xcconfig */,
+				ADB83C4D85BE6A51F097DED2 /* Pods-NiceOneTask-NiceOneTaskUITests.release.xcconfig */,
+				9781838372D698E3179706A4 /* Pods-NiceOneTaskTests.debug.xcconfig */,
+				264F103914366B31C1AC95C0 /* Pods-NiceOneTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D213D4312B40566400F54720 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,8 @@
 				D213D4532B40566800F54720 /* NiceOneTaskTests */,
 				D213D45D2B40566800F54720 /* NiceOneTaskUITests */,
 				D213D43B2B40566400F54720 /* Products */,
+				0216085F0B4DE68B6C509915 /* Pods */,
+				EA7B198D5279FB5352008217 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +131,11 @@
 		D213D43C2B40566400F54720 /* NiceOneTask */ = {
 			isa = PBXGroup;
 			children = (
+				D2935FA72B441611008A6DC9 /* Helper Files */,
+				D2935FA02B441386008A6DC9 /* Shopping Basket */,
 				D213D43D2B40566400F54720 /* AppDelegate.swift */,
 				D213D43F2B40566400F54720 /* SceneDelegate.swift */,
 				D213D4412B40566400F54720 /* ViewController.swift */,
-				D213D4432B40566400F54720 /* Main.storyboard */,
 				D213D4462B40566700F54720 /* Assets.xcassets */,
 				D213D4482B40566700F54720 /* LaunchScreen.storyboard */,
 				D213D44B2B40566700F54720 /* Info.plist */,
@@ -127,6 +160,40 @@
 			path = NiceOneTaskUITests;
 			sourceTree = "<group>";
 		};
+		D2935FA02B441386008A6DC9 /* Shopping Basket */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FA12B441391008A6DC9 /* Model */,
+			);
+			path = "Shopping Basket";
+			sourceTree = "<group>";
+		};
+		D2935FA12B441391008A6DC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FA22B4413A9008A6DC9 /* ShoppingBasketModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2935FA72B441611008A6DC9 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		EA7B198D5279FB5352008217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB3352AC67E9F25661847621 /* Pods_NiceOneTask.framework */,
+				10C4D9D4F64C3CA45351ED41 /* Pods_NiceOneTask_NiceOneTaskUITests.framework */,
+				5A4F5125C1CF9FB741923DB7 /* Pods_NiceOneTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D213D4642B40566800F54720 /* Build configuration list for PBXNativeTarget "NiceOneTask" */;
 			buildPhases = (
+				4D31BBA6E4CB42B7CEAA931B /* [CP] Check Pods Manifest.lock */,
 				D213D4362B40566400F54720 /* Sources */,
 				D213D4372B40566400F54720 /* Frameworks */,
 				D213D4382B40566400F54720 /* Resources */,
+				E0AFE5587E0178D70CAFD6CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D213D4672B40566800F54720 /* Build configuration list for PBXNativeTarget "NiceOneTaskTests" */;
 			buildPhases = (
+				5D894733E1934A8C0FE9CCD3 /* [CP] Check Pods Manifest.lock */,
 				D213D44C2B40566800F54720 /* Sources */,
 				D213D44D2B40566800F54720 /* Frameworks */,
 				D213D44E2B40566800F54720 /* Resources */,
@@ -169,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D213D46A2B40566800F54720 /* Build configuration list for PBXNativeTarget "NiceOneTaskUITests" */;
 			buildPhases = (
+				353ABE93E14162EA31B12526 /* [CP] Check Pods Manifest.lock */,
 				D213D4562B40566800F54720 /* Sources */,
 				D213D4572B40566800F54720 /* Frameworks */,
 				D213D4582B40566800F54720 /* Resources */,
+				3FA172E86CE06BAE32329396 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +305,7 @@
 			files = (
 				D213D44A2B40566700F54720 /* LaunchScreen.storyboard in Resources */,
 				D213D4472B40566700F54720 /* Assets.xcassets in Resources */,
-				D213D4452B40566400F54720 /* Main.storyboard in Resources */,
+				D2935FA92B441753008A6DC9 /* ShoppingBasketData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +325,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		353ABE93E14162EA31B12526 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NiceOneTask-NiceOneTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FA172E86CE06BAE32329396 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NiceOneTask-NiceOneTaskUITests/Pods-NiceOneTask-NiceOneTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NiceOneTask-NiceOneTaskUITests/Pods-NiceOneTask-NiceOneTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NiceOneTask-NiceOneTaskUITests/Pods-NiceOneTask-NiceOneTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D31BBA6E4CB42B7CEAA931B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NiceOneTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D894733E1934A8C0FE9CCD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NiceOneTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0AFE5587E0178D70CAFD6CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D213D4362B40566400F54720 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +436,7 @@
 				D213D4422B40566400F54720 /* ViewController.swift in Sources */,
 				D213D43E2B40566400F54720 /* AppDelegate.swift in Sources */,
 				D213D4402B40566400F54720 /* SceneDelegate.swift in Sources */,
+				D2935FA32B4413A9008A6DC9 /* ShoppingBasketModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +473,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D213D4432B40566400F54720 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D213D4442B40566400F54720 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D213D4482B40566700F54720 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +600,7 @@
 		};
 		D213D4652B40566800F54720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7658AB700E33587B1848CF /* Pods-NiceOneTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -441,7 +610,6 @@
 				INFOPLIST_FILE = NiceOneTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,6 +627,7 @@
 		};
 		D213D4662B40566800F54720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73E7B54EF9E5546DE90A5B3A /* Pods-NiceOneTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,7 +637,6 @@
 				INFOPLIST_FILE = NiceOneTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +654,7 @@
 		};
 		D213D4682B40566800F54720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9781838372D698E3179706A4 /* Pods-NiceOneTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +674,7 @@
 		};
 		D213D4692B40566800F54720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 264F103914366B31C1AC95C0 /* Pods-NiceOneTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +694,7 @@
 		};
 		D213D46B2B40566800F54720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6061CE3ADA7B751D166CD696 /* Pods-NiceOneTask-NiceOneTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +712,7 @@
 		};
 		D213D46C2B40566800F54720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB83C4D85BE6A51F097DED2 /* Pods-NiceOneTask-NiceOneTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

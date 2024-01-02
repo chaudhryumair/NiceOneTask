@@ -13,10 +13,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if let windowScene = scene as? UIWindowScene {
+          let window = UIWindow(windowScene: windowScene)
+          let controller = ViewController()
+          window.rootViewController = controller
+          self.window = window
+          window.makeKeyAndVisible()
+        }
+        create_TabBar()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,5 +52,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+}
+
+extension SceneDelegate {
+    func create_TabBar(){
+        
+        let tabbar = UITabBarController()
+        let firstVC = UINavigationController(rootViewController: ViewController())
+        let secondVC = UINavigationController(rootViewController: ViewController())
+        let thirdVC = UINavigationController(rootViewController: ViewController())
+        let fourVC = UINavigationController(rootViewController: ViewController())
+        let fiveVC = UINavigationController(rootViewController: ViewController())
+
+        firstVC.tabBarItem = UITabBarItem(title: "الحساب", image: UIImage(named: "imgAccount"),selectedImage: UIImage(named: "imgAccount"))
+        secondVC.tabBarItem = UITabBarItem(title: "الحقيبة", image: UIImage(systemName: "person"),selectedImage: UIImage(systemName: "person.fill"))
+        thirdVC.tabBarItem = UITabBarItem(title: "الماركات", image: UIImage(systemName: "house"),selectedImage: UIImage(systemName: "house.fill"))
+        fourVC.tabBarItem = UITabBarItem(title: "الأقسام", image: UIImage(systemName: "person"),selectedImage: UIImage(systemName: "person.fill"))
+        fiveVC.tabBarItem = UITabBarItem(title: "الرئيسية", image: UIImage(systemName: "house"),selectedImage: UIImage(systemName: "house.fill"))
+        tabbar.tabBar.tintColor = .black
+
+        tabbar.viewControllers = [firstVC, secondVC, thirdVC, fourVC, fiveVC]
+        window?.rootViewController = tabbar
+    }
 }
 
