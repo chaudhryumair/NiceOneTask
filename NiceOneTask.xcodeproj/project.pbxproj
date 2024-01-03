@@ -12,7 +12,7 @@
 		C7079F112CE5EC0373C521F1 /* Pods_NiceOneTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4F5125C1CF9FB741923DB7 /* Pods_NiceOneTaskTests.framework */; };
 		D213D43E2B40566400F54720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D43D2B40566400F54720 /* AppDelegate.swift */; };
 		D213D4402B40566400F54720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D43F2B40566400F54720 /* SceneDelegate.swift */; };
-		D213D4422B40566400F54720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4412B40566400F54720 /* ViewController.swift */; };
+		D213D4422B40566400F54720 /* ShoppingBasketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4412B40566400F54720 /* ShoppingBasketVC.swift */; };
 		D213D4472B40566700F54720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D213D4462B40566700F54720 /* Assets.xcassets */; };
 		D213D44A2B40566700F54720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D213D4482B40566700F54720 /* LaunchScreen.storyboard */; };
 		D213D4552B40566800F54720 /* NiceOneTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4542B40566800F54720 /* NiceOneTaskTests.swift */; };
@@ -20,6 +20,8 @@
 		D213D4612B40566800F54720 /* NiceOneTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213D4602B40566800F54720 /* NiceOneTaskUITestsLaunchTests.swift */; };
 		D2935FA32B4413A9008A6DC9 /* ShoppingBasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FA22B4413A9008A6DC9 /* ShoppingBasketModel.swift */; };
 		D2935FA92B441753008A6DC9 /* ShoppingBasketData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */; };
+		D2935FAD2B449BEF008A6DC9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FAC2B449BEE008A6DC9 /* ColorExtension.swift */; };
+		D2935FB12B44ABC9008A6DC9 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FB02B44ABC8008A6DC9 /* TableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 		D213D43A2B40566400F54720 /* NiceOneTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceOneTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D213D43D2B40566400F54720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D213D43F2B40566400F54720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D213D4412B40566400F54720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D213D4412B40566400F54720 /* ShoppingBasketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketVC.swift; sourceTree = "<group>"; };
 		D213D4462B40566700F54720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D213D4492B40566700F54720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D213D44B2B40566700F54720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		D213D4602B40566800F54720 /* NiceOneTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOneTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2935FA22B4413A9008A6DC9 /* ShoppingBasketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketModel.swift; sourceTree = "<group>"; };
 		D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoppingBasketData.json; sourceTree = "<group>"; };
+		D2935FAC2B449BEE008A6DC9 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D2935FB02B44ABC8008A6DC9 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		DF7658AB700E33587B1848CF /* Pods-NiceOneTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTask.debug.xcconfig"; path = "Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3352AC67E9F25661847621 /* Pods_NiceOneTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceOneTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,11 +135,10 @@
 		D213D43C2B40566400F54720 /* NiceOneTask */ = {
 			isa = PBXGroup;
 			children = (
+				D2935FAA2B44293A008A6DC9 /* Delegates */,
 				D2935FA72B441611008A6DC9 /* Helper Files */,
 				D2935FA02B441386008A6DC9 /* Shopping Basket */,
-				D213D43D2B40566400F54720 /* AppDelegate.swift */,
-				D213D43F2B40566400F54720 /* SceneDelegate.swift */,
-				D213D4412B40566400F54720 /* ViewController.swift */,
+				D213D4412B40566400F54720 /* ShoppingBasketVC.swift */,
 				D213D4462B40566700F54720 /* Assets.xcassets */,
 				D213D4482B40566700F54720 /* LaunchScreen.storyboard */,
 				D213D44B2B40566700F54720 /* Info.plist */,
@@ -163,6 +166,7 @@
 		D2935FA02B441386008A6DC9 /* Shopping Basket */ = {
 			isa = PBXGroup;
 			children = (
+				D2935FAE2B44ABB0008A6DC9 /* cell */,
 				D2935FA12B441391008A6DC9 /* Model */,
 			);
 			path = "Shopping Basket";
@@ -179,9 +183,43 @@
 		D2935FA72B441611008A6DC9 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2935FAB2B449BCE008A6DC9 /* Extensions */,
 				D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */,
 			);
 			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		D2935FAA2B44293A008A6DC9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D213D43D2B40566400F54720 /* AppDelegate.swift */,
+				D213D43F2B40566400F54720 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		D2935FAB2B449BCE008A6DC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FAC2B449BEE008A6DC9 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2935FAE2B44ABB0008A6DC9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FAF2B44ABB7008A6DC9 /* table cell */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		D2935FAF2B44ABB7008A6DC9 /* table cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FB02B44ABC8008A6DC9 /* TableCell.swift */,
+			);
+			path = "table cell";
 			sourceTree = "<group>";
 		};
 		EA7B198D5279FB5352008217 /* Frameworks */ = {
@@ -433,10 +471,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D213D4422B40566400F54720 /* ViewController.swift in Sources */,
+				D2935FB12B44ABC9008A6DC9 /* TableCell.swift in Sources */,
+				D213D4422B40566400F54720 /* ShoppingBasketVC.swift in Sources */,
 				D213D43E2B40566400F54720 /* AppDelegate.swift in Sources */,
 				D213D4402B40566400F54720 /* SceneDelegate.swift in Sources */,
 				D2935FA32B4413A9008A6DC9 /* ShoppingBasketModel.swift in Sources */,
+				D2935FAD2B449BEF008A6DC9 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
