@@ -70,6 +70,8 @@ extension SceneDelegate {
         secondVC.tabBarItem = UITabBarItem(title: "الأقسام", image: UIImage(systemName: "person"),selectedImage: UIImage(systemName: "person.fill"))
         firstVC.tabBarItem = UITabBarItem(title: "الرئيسية", image: UIImage(systemName: "house"),selectedImage: UIImage(systemName: "house.fill"))
         tabbar.tabBar.tintColor = .black
+        tabbar.tabBar.barTintColor = UIColor.white // your color
+
 
         tabbar.viewControllers = [firstVC, secondVC, thirdVC, fourVC, fiveVC]
         window?.rootViewController = tabbar

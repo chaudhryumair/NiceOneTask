@@ -22,6 +22,7 @@
 		D2935FA92B441753008A6DC9 /* ShoppingBasketData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */; };
 		D2935FAD2B449BEF008A6DC9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FAC2B449BEE008A6DC9 /* ColorExtension.swift */; };
 		D2935FB12B44ABC9008A6DC9 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FB02B44ABC8008A6DC9 /* TableCell.swift */; };
+		D2935FB42B458881008A6DC9 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2935FB32B458881008A6DC9 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D2935FA82B441753008A6DC9 /* ShoppingBasketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoppingBasketData.json; sourceTree = "<group>"; };
 		D2935FAC2B449BEE008A6DC9 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		D2935FB02B44ABC8008A6DC9 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		D2935FB32B458881008A6DC9 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		DF7658AB700E33587B1848CF /* Pods-NiceOneTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceOneTask.debug.xcconfig"; path = "Target Support Files/Pods-NiceOneTask/Pods-NiceOneTask.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3352AC67E9F25661847621 /* Pods_NiceOneTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceOneTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,6 +211,7 @@
 		D2935FAE2B44ABB0008A6DC9 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				D2935FB22B458861008A6DC9 /* collection  cell */,
 				D2935FAF2B44ABB7008A6DC9 /* table cell */,
 			);
 			path = cell;
@@ -220,6 +223,14 @@
 				D2935FB02B44ABC8008A6DC9 /* TableCell.swift */,
 			);
 			path = "table cell";
+			sourceTree = "<group>";
+		};
+		D2935FB22B458861008A6DC9 /* collection  cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2935FB32B458881008A6DC9 /* ProductCell.swift */,
+			);
+			path = "collection  cell";
 			sourceTree = "<group>";
 		};
 		EA7B198D5279FB5352008217 /* Frameworks */ = {
@@ -475,6 +486,7 @@
 				D213D4422B40566400F54720 /* ShoppingBasketVC.swift in Sources */,
 				D213D43E2B40566400F54720 /* AppDelegate.swift in Sources */,
 				D213D4402B40566400F54720 /* SceneDelegate.swift in Sources */,
+				D2935FB42B458881008A6DC9 /* ProductCell.swift in Sources */,
 				D2935FA32B4413A9008A6DC9 /* ShoppingBasketModel.swift in Sources */,
 				D2935FAD2B449BEF008A6DC9 /* ColorExtension.swift in Sources */,
 			);
@@ -650,8 +662,8 @@
 				INFOPLIST_FILE = NiceOneTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -677,8 +689,8 @@
 				INFOPLIST_FILE = NiceOneTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

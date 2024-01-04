@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class ShoppingBasketVC: UIViewController {
     // MARK: Views
@@ -18,24 +19,39 @@ class ShoppingBasketVC: UIViewController {
     lazy var progressBar = UIProgressView(progressViewStyle: .bar)
     lazy var imgBannerTop = UIImageView(frame: .zero)
     lazy var tableItems = UITableView(frame: .zero)
+    let sugggestionItems:UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
     lazy var imgBannerCenter = UIImageView(frame: .zero)
     lazy var lblSuggestion = UILabel(frame: .zero)
-
-
     lazy var contentview = UIView(frame: .zero)
-
+    lazy var bottomView = UIView(frame: .zero)
+    lazy var lblItemsbottomView = UILabel(frame: .zero)
+    lazy var btnCheckout = UIButton()
+    
     // MARK: variables
     let scrollView = UIScrollView()
+    var productsResults: [RecommendedProductsProduct]?
+
 
     // MARK: Views Life Cycle
 
     override func viewDidLoad() {
       super.viewDidLoad()
-    setupConstraints()
-    self.navigationController?.navigationBar.isHidden = true
+        setupConstraints()
+        collectionViewSetup()
+        tableviewSetup()
+        self.navigationController?.navigationBar.isHidden = true
+        loadJsonFile()
+        scrollView.frame = CGRect(x: scrollView.frame.origin.x, y: scrollView.frame.origin.y, width: scrollView.frame.size.width, height: 2000)
+
     }
    
     // MARK: Utility Functions
+    func loadJsonFile() {
+        readLocalFile(forName: "ShoppingBasketData")
+        if let localData = self.readLocalFile(forName: "ShoppingBasketData") {
+        self.parse(jsonData: localData)
+        }
+        }
    
     func tableviewSetup() {
         tableItems.delegate = self
@@ -44,6 +60,24 @@ class ShoppingBasketVC: UIViewController {
         tableItems.bounces = false
         self.tableItems.reloadData()
         }
+    
+    func collectionViewSetup(){
+   
+    let screenWidth = UIScreen.main.bounds.width
+    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    layout.itemSize = CGSize(width: screenWidth/3  - 10, height: 214)
+    layout.minimumInteritemSpacing = 4
+    layout.minimumLineSpacing = 4
+    layout.headerReferenceSize = CGSize(width: 10, height: 0)
+    sugggestionItems.collectionViewLayout = layout
+    sugggestionItems.bounces = false
+    sugggestionItems.dataSource = self
+    sugggestionItems.delegate = self
+    sugggestionItems.register(ProductCell.self, forCellWithReuseIdentifier: "productCell")
+    sugggestionItems.reloadData()
+    scrollView.bounces = false
+    }
     
     func addViews(){
         view.addSubview(scrollView)
@@ -57,49 +91,61 @@ class ShoppingBasketVC: UIViewController {
         self.contentview.addSubview(tableItems)
         self.contentview.addSubview(imgBannerCenter)
         self.contentview.addSubview(lblSuggestion)
-
+        self.contentview.addSubview(sugggestionItems)
+        self.bottomView.addSubview(lblItemsbottomView)
+        self.bottomView.addSubview(btnCheckout)
+        self.view.addSubview(bottomView)
     }
     
     func setupUI(){
         addViews()
+
         contentview.backgroundColor = .clear
         self.view.backgroundColor = UIColor.init(hexaRGBA: "#F6F6F6")
+        self.bottomView.backgroundColor = UIColor.white
         navigationView.backgroundColor = .white
         imgUpload.image = UIImage(named: "imgUpload")
         imgBannerTop.image = UIImage(named: "imgBannerTop")
         imgBannerCenter.image = UIImage(named: "imgCenter")
         imgBannerTop.contentMode = .redraw
         imgBannerCenter.contentMode = .redraw
-
-             
         lblTitle.text = "سلة التسوق"
         lblHeading.text = "هل ترغب بتوصيل مجانى ؟أضف 141.00 ريال إلى سلتك"
         lblSuggestion.text = "منتجات قد تنال اعجابك"
-
+        lblItemsbottomView.text = "4 منتجات - SR 600"
         lblHeading.font = UIFont.systemFont(ofSize: 13)
+        lblItemsbottomView.font = UIFont.systemFont(ofSize: 13)
+        lblItemsbottomView.textColor = .black
         lblSuggestion.font = UIFont.systemFont(ofSize: 16)
-
         progressBar.setProgress(0.4, animated: true)
         progressBar.trackTintColor = UIColor.init(hexaRGBA: "#F6F6F6")
         progressBar.tintColor = UIColor.init(hexaRGBA: "#EE92FF")
         progressBar.layer.cornerRadius = 4.0
         progressBar.clipsToBounds = true
-//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        sugggestionItems.backgroundColor = .clear
+        btnCheckout.setTitle("اختر عنوان التوصيل", for: .normal)
+        btnCheckout.setTitleColor(.white, for: .normal)
+        btnCheckout.backgroundColor = .black
+        btnCheckout.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        
+        if let tabBarItems = tabBarController?.tabBar.items {
+            let tabItem = tabBarItems[1]
+            tabItem.badgeValue = "2"
+                }
+        UIView.appearance().semanticContentAttribute = .forceRightToLeft
 
     }
 
     func setupConstraints(){
-                                    // HeaderView
+                                    
         setupUI()
         scrollView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.edges.equalTo(view)
+            make.top.equalToSuperview().offset(-20)
         }
         contentview.snp.makeConstraints { make in
             make.top.bottom.equalTo(self.scrollView)
-            make.left.right.equalTo(self.view)
+            make.left.right.equalTo(self.scrollView)
             make.width.equalTo(self.scrollView)
             make.height.equalTo(self.scrollView)
         }
@@ -108,7 +154,6 @@ class ShoppingBasketVC: UIViewController {
             make.trailing.equalTo(contentview.snp.trailing)
             make.top.equalTo(contentview.snp.top)
             make.height.equalTo(100)
-
         }
         imgUpload.snp.makeConstraints { make in
             make.leading.equalTo(navigationView.snp.leading).offset(17)
@@ -126,7 +171,6 @@ class ShoppingBasketVC: UIViewController {
             make.bottom.equalTo(navigationView.snp.bottom).offset(-20)
             make.height.equalTo(25)
         }
-        
         progressBar.snp.makeConstraints { make in
             make.leading.equalTo(lblHeading.snp.leading)
             make.trailing.equalTo(navigationView.snp.trailing).offset(-30)
@@ -135,9 +179,9 @@ class ShoppingBasketVC: UIViewController {
         }
         imgBannerTop.snp.makeConstraints { make in
             make.leading.equalTo(contentview.snp.leading).offset(10)
-            make.trailing.equalTo(contentview.snp.trailing).offset(-10)
-            make.top.equalTo(navigationView.snp.bottom).offset(8)
-            make.height.equalTo(90)
+            make.trailing.equalTo(contentview.snp.trailing).offset(-8)
+            make.top.equalTo(navigationView.snp.bottom).offset(6)
+            make.height.equalTo(60)
         }
         tableItems.snp.makeConstraints { make in
             make.leading.equalTo(contentview.snp.leading)
@@ -156,17 +200,53 @@ class ShoppingBasketVC: UIViewController {
             make.top.equalTo(imgBannerCenter.snp.bottom).offset(8)
             make.height.equalTo(24)
         }
-        tableviewSetup()
+        sugggestionItems.snp.makeConstraints { make in
+            make.leading.equalTo(imgBannerCenter.snp.leading)
+            make.trailing.equalTo(imgBannerCenter.snp.trailing)
+            make.top.equalTo(lblSuggestion.snp.bottom).offset(8)
+            make.bottom.equalTo(contentview.snp.bottom).offset(8)
+        }
+        
+        bottomView.snp.makeConstraints { make in
+            make.height.equalTo(150)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        lblItemsbottomView.snp.makeConstraints { make in
+            make.height.equalTo(15)
+            make.centerX.equalTo(bottomView.snp.centerX)
+            make.top.equalTo(bottomView.snp.top).offset(10)
+        }
+        btnCheckout.snp.makeConstraints { make in
+            make.height.equalTo(35)
+            make.top.equalTo(lblItemsbottomView.snp.top).offset(25)
+            make.leading.equalTo(bottomView.snp.leading)
+            make.trailing.equalTo(bottomView.snp.trailing)
+        }
+        
     }
-}
-
-
-
-//        if let tabBarItems = tabBarController?.tabBar.items {
-//             let tabItem = tabBarItems[1]
-//             tabItem.badgeValue = "5"
-//        }
-
+    
+    private func readLocalFile(forName name: String) -> Data? {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name,
+                                                 ofType: "json"),
+            let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+            return jsonData
+            }
+        } catch {
+            print(error)}
+        return nil
+    }
+    private func parse(jsonData: Data) {
+        do {
+            let decodedData = try JSONDecoder().decode(ShoppingBasketModel.self,
+                                                    from: jsonData)
+            productsResults = decodedData.data?.recommendedProducts?.products
+        } catch {
+            print("decode error")
+        }
+    }
+    }
 
 
 //MARK: - TableView
@@ -216,5 +296,28 @@ extension ShoppingBasketVC: UITableViewDelegate , UITableViewDataSource {
     }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
-
     }
+//MARK: - CollecvtionView
+extension ShoppingBasketVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return productsResults?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCell
+        cell.imgConcession.image = UIImage(named: "imgConcession")
+        let url = URL(string: productsResults?[indexPath.row].thumb ?? "")
+        cell.imgMain.kf.setImage(with: url)
+        cell.lblTitle.text = productsResults?[indexPath.row].name ?? ""
+        cell.lblPrice.text = productsResults?[indexPath.row].priceFormated ?? ""
+
+             return cell
+         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}

@@ -6,7 +6,7 @@ target 'NiceOneTask' do
   use_frameworks!
 
 	pod 'SnapKit'
-  #pod 'Kingfisher', '~> 7.0'
+  pod 'Kingfisher', '~> 7.0'
 
 
 

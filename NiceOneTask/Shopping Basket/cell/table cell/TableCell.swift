@@ -37,11 +37,11 @@ class TableCell: UITableViewCell {
         lblCategory.textColor =   UIColor.init(hexaRGB: "202020")
         lblTitle.textColor = .black
         lblTitle.numberOfLines = 2
-        btnPlus.setTitle("+", for: .normal)
+        btnPlus.setTitle("-", for: .normal)
         btnPlus.setTitleColor(.darkGray, for: .normal)
         btnMinus.setTitleColor(.darkGray, for: .normal)
 
-        btnMinus.setTitle("-", for: .normal)
+        btnMinus.setTitle("+", for: .normal)
         lblVal.text = "\(productCounter)"
 
     }
@@ -58,10 +58,7 @@ class TableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
     }
-    @objc func buttonAction(sender: UIButton!) {
-        productCounter = productCounter + 1
-        print("\(productCounter)")
-     }
+   
     func addStackViewSetup() {
         stackView.axis = .horizontal
         stackView.alignment = .center
@@ -82,11 +79,7 @@ class TableCell: UITableViewCell {
         addSubview(lblVal)
         addSubview(btnMinus)
         addSubview(stackView)
-
         addStackViewSetup()
-
-
-
     }
     func constraintAdd() {
         imgItem.snp.makeConstraints { make in
@@ -117,7 +110,6 @@ class TableCell: UITableViewCell {
             make.height.equalTo(15)
             make.width.equalTo(50)
         }
-        
         stepperView.snp.makeConstraints { make in
             make.trailing.equalTo(imgBin.snp.trailing)
             make.bottom.equalToSuperview().offset(-15)
@@ -162,7 +154,5 @@ class TableCell: UITableViewCell {
             make.leading.trailing.top.bottom.equalTo(stepperView)
         }
        
-        
     }
-    
 }
